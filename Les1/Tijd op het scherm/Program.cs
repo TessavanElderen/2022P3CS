@@ -1,14 +1,26 @@
 ﻿using System;
+using System.Timers; 
 
 namespace Tijd_op_het_scherm
 {
-    class Program
+    internal class Program
     {
         static void Main(string[] args)
         {
-            DateTime dt = new DateTime(2022, 12, 2, 16, 52, 0);
-            Console.WriteLine(DateTime.Now.ToString());
-        }
 
+            Timer tr = new Timer(1000);
+            tr.Elapsed += Tr_Elapsed;
+            tr.Enabled = true;
+            tr.AutoReset = true;
+            tr.Start();
+
+            Console.ReadKey();
+        }
+        private static void Tr_Elapsed(object sender, ElapsedEventArgs e)
+        {
+            DateTime time = DateTime.Now;
+            string datumTijd = "HH:mm:ss"; 
+            Console.WriteLine(time.ToString(datumTijd));
+        }
     }
 }
