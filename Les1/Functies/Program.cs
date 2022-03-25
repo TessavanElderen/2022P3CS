@@ -2,13 +2,17 @@
 
 namespace Functies
 {
-    
+
     class Program
     {
         static void Main(string[] args)
         {
-            string myFunc = "Hello world!";
-            Console.WriteLine(myFunc);
+            hallo(); 
+        }
+
+        void hallo()
+        {
+            Console.WriteLine("Hallo World!!!!");
         }
     }
 }

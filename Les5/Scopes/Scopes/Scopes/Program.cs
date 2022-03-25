@@ -1,16 +1,14 @@
 ﻿using System;
 
-namespace Loops
+namespace Scopes
 {
     class Program
     {
         static void Main(string[] args)
         {
-            
-
-            for(int i = 0; i <= 100; i++)
             {
-                Console.WriteLine(i);
+                string myName = "Tessa";
+                Console.WriteLine(myName);
             }
             
         }
