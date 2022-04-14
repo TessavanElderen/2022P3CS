@@ -1,10 +1,15 @@
 ﻿using System;
+using Animals; 
 
 namespace NameSpaces
 {
     class Program
     {
-       
+        static void Main(string[] args)
+        {
+            Animals.Wolves age = new Animals.Wolves();
+            age.WolfAge();
+        }
     }
 }
 
@@ -12,9 +17,9 @@ namespace Animals
 {
     class Wolves
     {
-        static void Main(string[] args)
+        public void WolfAge()
         {
-            Console.WriteLine("Wolves, Sheeps");
-        }
+            Console.WriteLine("Wolf is 4 jaar");
+        }  
     }
 }
